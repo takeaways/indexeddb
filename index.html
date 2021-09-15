@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="geonil jang, 장건일, takeaways">
+  <meta name="description" content="you can learn how to use indexeddb with me and 인덱스트 디비 사용해보기.">
+  <meta name="keyword" content="HTML, meta, indexeddb, vanila javascript">
+  <meta property="og:title" content="learn indexeddb with takeaways" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://github.com/takeaways/indexeddb" />
+  <meta property="og:image" content="https://github.com/takeaways/indexeddb/raw/main/github-assets/images/indexeddb.png" />
+  <title>Learn Indexeddb with Me</title>
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+<script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="logo">
+        <img src="./assets/images/logo.png" alt="logo">
+      </div>
+      <div class="name">
+        <strong>Geonil Jang</strong>
+      </div>
+    </header>
+    <main class="main">
+      <h1>Indexeddb</h1>
+      <h2>Using idb-keyval library</h2>
+      <section class="form-section">
+        <form class="form">
+          <p>
+            <label for="name">name: </label>
+            <input type="text" id="name" placeholder="name" required>
+          </p>
+          <p>
+            <label for="country">country of Origin: </label>
+            <input type="text" id="country" value="" required>
+          </p>
+          <p>
+            <label for="age">Years Old: </label>
+            <input type="text" id="age" inputmode="numeric" pattern="[\d]+" required>
+          </p>
+          <p class="row">
+            <input type="checkbox" id="isOwned" value="yes" hidden>
+            <label for="isOwned">Owned: <span></span></label>
+          </p>
+          <p class="button-group"> 
+            <button id="btnAdd">ADD</button>
+            <button id="btnUpdate">UPDATE</button>
+            <button id="btnDelete">Delete</button>
+            <button id="btnClear">Reset Form</button>
+          </p>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>&copy; <a href="https://github.com/takeaways/indexeddb" target="_blank">Geonil Jang</a></p>
+    </footer>
+  </div>
+</body>
+</html>

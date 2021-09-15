@@ -1,0 +1,244 @@
+/*!********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/form.css ***!
+  \********************************************************************/
+.form-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:2em;
+  min-width: 300px;
+  max-width: 500px;
+  margin:0 auto;
+  border-radius: 5px;
+  background-color: #ddd;
+  box-shadow: rgba(184, 78, 29, 0.35) 0px 5px 15px;
+  perspective:1000px;
+}
+
+.form{
+  width: 100%;
+  transition: .2s;
+}
+
+.form:hover{
+  width: 100%;
+  
+  /* transform: rotateX(10deg); */
+}
+.form p{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+.form p.row{
+  flex-direction: row;
+  align-items: center;
+}
+.form input{
+  font-size: 2em;
+  padding:.2em;
+  border:none;
+  outline: none;
+  border-radius: .2em;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: box-shadow .2s linear;
+}
+.form input:hover,
+.form input:focus{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.form p.row label[for='isOwned']{
+  margin-right: .5em;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  order:2;
+}
+
+.form p.row label[for='isOwned'] span{
+  margin-left: 1em;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  /* background-color: white; */
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  border-radius: .5rem;
+}
+.form p.row #isOwned{
+  order:1;
+}
+.form p.row #isOwned + label span{
+  display: inline-block;
+  position: relative;
+  transition: background-color .6s ease-in-out;
+  cursor: pointer;
+}
+.form p.row #isOwned + label span:hover{
+  background-color:white;
+  opacity: 0.5;
+}
+.form p.row #isOwned:checked + label span:hover{
+  background-color:white;
+  opacity: 1;
+}
+.form p.row #isOwned:checked + label span{
+  background-color:white;
+  box-shadow: none;
+}
+.form p.row #isOwned + label span::before{
+  content: "";
+  display: inline-block;
+  width: 1.5em;
+  height: 2px;
+  background-color: red;
+  position: absolute;
+  transition: transform .3s ease-out .3s;
+  top:15%;
+  transform: rotate(60deg) scale(0);
+  transform-origin: left;
+}
+.form p.row #isOwned:checked + label span::before{
+  content: "";
+  transition: transform .3s ease-in;
+  transform: rotate(60deg) scale(1);
+}
+
+.form p.row #isOwned + label span::after{
+  content: "";
+  display: inline-block;
+  width: 2em;
+  height: 2px;
+  background-color: red;
+  position: absolute;
+  bottom: 2px;
+  left:7px;
+  transform-origin: left;
+  transition: all .3s ease-in;
+  transform: rotate(-50deg) scale(0);
+}
+.form p.row #isOwned:checked + label span::after{
+  content: "";
+  transition: all .3s ease-out .3s;
+  transform: rotate(-50deg) scale(1);
+}
+.form label{
+  font-size: 2em;
+  text-transform: uppercase;
+  margin-bottom: .2em;
+}
+
+.form .button-group{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(50px, 1fr));
+  grid-gap:5px;
+}
+
+.form .button-group button{
+  padding:.8em;
+  border:none;
+  border-radius: .5em;
+  cursor: pointer;
+  font-size: 1.6em;
+  color:white;
+  background-color: dodgerblue;
+  text-transform: uppercase;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  
+}
+
+.form .button-group button:hover {
+  opacity: 0.8;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  
+  
+}
+
+.form .button-group button:active {
+  opacity: 0.9;
+}
+/*!*******************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/app.css ***!
+  \*******************************************************************/
+*{
+  margin:0;
+  padding:0;
+  user-select: none;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+a{
+  text-decoration: none;
+  color:inherit;
+}
+
+body{
+  background-color: rgb(63, 7, 7);
+}
+
+header.header{
+  height: 8rem;
+  background-color:black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:#fff;
+  padding: 0 2em;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header .logo{
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+main.main{
+  font-size: 2em;
+  padding:4em 1em 6em 1em; 
+}
+
+main.main h1{
+  font-size: 3em;
+  color:goldenrod;
+}
+
+main.main h2{
+  font-size: 2em;
+  color:rgb(153, 35, 35);
+}
+
+.header .logo img{
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;  
+}
+
+.header .name strong{
+  font-size: 2rem;
+}
+
+footer.footer {
+  border-top: 2px solid #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: maroon;
+}
+footer.footer p{
+  padding:2em;
+}
+footer.footer p,
+footer.footer p a{
+  font-size: 2rem;
+  font-weight: 600;
+  color:#fff;
+  opacity: 0.8;
+}
