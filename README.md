@@ -1,5 +1,5 @@
 # indexeddb
-Do you know how to use indexeddb? [here for fun](https://takeaways.github.io/indexeddb/)
+Do you know how to use indexeddb? [here for fun](https://takeaways.github.io/indexeddb/)  
 ![check](/github-assets/images/check.gif)
 
 # Setup
