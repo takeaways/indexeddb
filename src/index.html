@@ -28,7 +28,30 @@
       <h1>Indexeddb</h1>
       <h2>Using idb-keyval library</h2>
       <section class="form-section">
-        <form class="form"></form>
+        <form class="form">
+          <p>
+            <label for="name">name: </label>
+            <input type="text" id="name" placeholder="name" required>
+          </p>
+          <p>
+            <label for="country">country of Origin: </label>
+            <input type="text" id="country" value="" required>
+          </p>
+          <p>
+            <label for="age">Years Old: </label>
+            <input type="text" id="age" inputmode="numeric" pattern="[\d]+" required>
+          </p>
+          <p class="row">
+            <input type="checkbox" id="isOwned" value="yes" hidden>
+            <label for="isOwned">Owned: <span></span></label>
+          </p>
+          <p class="button-group"> 
+            <button id="btnAdd">ADD</button>
+            <button id="btnUpdate">UPDATE</button>
+            <button id="btnDelete">Delete</button>
+            <button id="btnClear">Reset Form</button>
+          </p>
+        </form>
       </section>
     </main>
     <footer class="footer">

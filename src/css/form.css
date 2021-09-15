@@ -1,0 +1,96 @@
+.form-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:2em;
+  max-width: 480px;
+  background-color: #ddd;
+  margin:0 auto;
+}
+
+.form{
+  width: 100%;
+}
+.form p{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+.form p.row{
+  flex-direction: row;
+  align-items: center;
+}
+.form input{
+  font-size: 2em;
+  padding:.2em;
+  border:none;
+  outline: none;
+}
+.form p.row label[for='isOwned']{
+  margin-right: .5em;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  order:2;
+}
+
+.form p.row label[for='isOwned'] span{
+  margin-left: 1em;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  background-color: white;
+  border-radius: .5rem;
+}
+.form p.row #isOwned{
+  order:1;
+}
+.form p.row #isOwned + label span{
+  display: inline-block;
+  position: relative;
+}
+.form p.row #isOwned:checked + label span{
+  background-color: green;
+}
+.form p.row #isOwned + label span::before{
+  content: "";
+  display: inline-block;
+  width: 1.5em;
+  height: 2px;
+  background-color: red;
+  position: absolute;
+  transition: transform .3s ease-out .3s;
+  top:15%;
+  transform: rotate(60deg) scale(0);
+  transform-origin: left;
+}
+.form p.row #isOwned:checked + label span::before{
+  content: "";
+  transition: transform .3s ease-in;
+  transform: rotate(60deg) scale(1);
+}
+
+.form p.row #isOwned + label span::after{
+  content: "";
+  display: inline-block;
+  width: 2em;
+  height: 2px;
+  background-color: red;
+  position: absolute;
+  bottom: 2px;
+  left:7px;
+  transform-origin: left;
+  transition: all .3s ease-in;
+  transform: rotate(-50deg) scale(0);
+}
+.form p.row #isOwned:checked + label span::after{
+  content: "";
+  transition: all .3s ease-out .3s;
+  transform: rotate(-50deg) scale(1);
+}
+.form label{
+  font-size: 2em;
+  text-transform: capitalize;
+  margin-bottom: .2em;
+}
+

@@ -1,6 +1,7 @@
 import { set, get, createStore } from "idb-keyval";
 import "../css/app.css";
-import "./creatingAndVersioning";
+// import "./creatingAndVersioning";
+import "./transactionAndRequests";
 (async () => {
   try {
     const st = createStore("myDB", "myStore");
