@@ -1,27 +1,12 @@
-import { set, get, update, del } from "idb-keyval";
+import { set, get, createStore } from "idb-keyval";
 import "../css/app.css";
 
 (async () => {
   try {
-    await set("user_id", Date.now());
-
-    const mock_user_info_data = {
-      id: 1004,
-      name: "Geonil Jang",
-      email: "wkdrjsdlf2@gmail.com",
-    };
-
-    await set("info", mock_user_info_data);
-    const info = await get("info");
-    console.log(info);
-
-    await update("user_id", () => "UPUP");
-
-    await set("dd", "delete gogo");
-
-    del("dd");
+    const st = createStore("myDB", "myStore");
+    await set("my_id", Date.now(), st);
+    await get("my_id", st);
   } catch (error) {
-    console.log("------");
     console.error(error);
   }
 })();

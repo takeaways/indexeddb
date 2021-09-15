@@ -1,6 +1,7 @@
 # indexeddb
 Do you know how to use indexeddb?
 
+
 # Setup
 1. make common javascript browser setup and open with live-server
 2. open chrome and chrome devtool.
@@ -46,13 +47,31 @@ import "../css/app.css"
   }
 })()
 ```
-
 ## Base CRUD
 ```js
+//return promise
 import { set, get, update, del } from "idb-keyval";
 ```
 
 ## keys, values and entries
 ```js
+//return promise
 import { keys, values, entries} from "idb-keyval";
 ```
+
+## for create custom database and store
+```js
+import { set, get, createStore } from "idb-keyval";
+
+(async () => {
+  try {
+    const st = createStore("myDB", "myStore");
+    await set("my_id", Date.now(), st);
+    await get("my_id", st);
+  } catch (error) {
+    console.error(error);
+  }
+})();
+```
+
+> service worker can use indexeddb so, I can access same database  from my webpage as well as service worker that is connected my page. That means, if I build progress webapp. I have a place that I can store data.
