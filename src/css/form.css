@@ -9,11 +9,18 @@
   border-radius: 5px;
   background-color: #ddd;
   box-shadow: rgba(184, 78, 29, 0.35) 0px 5px 15px;
+  perspective:1000px;
 }
 
 .form{
   width: 100%;
+  transition: .2s;
+}
+
+.form:hover{
+  width: 100%;
   
+  /* transform: rotateX(10deg); */
 }
 .form p{
   display: flex;
@@ -33,6 +40,7 @@
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   transition: box-shadow .2s linear;
 }
+.form input:hover,
 .form input:focus{
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
@@ -49,7 +57,8 @@
   display: inline-block;
   width: 2em;
   height: 2em;
-  background-color: white;
+  /* background-color: white; */
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   border-radius: .5rem;
 }
 .form p.row #isOwned{
@@ -59,9 +68,19 @@
   display: inline-block;
   position: relative;
   transition: background-color .6s ease-in-out;
+  cursor: pointer;
+}
+.form p.row #isOwned + label span:hover{
+  background-color:white;
+  opacity: 0.5;
+}
+.form p.row #isOwned:checked + label span:hover{
+  background-color:white;
+  opacity: 1;
 }
 .form p.row #isOwned:checked + label span{
-  background-color:limegreen;
+  background-color:white;
+  box-shadow: none;
 }
 .form p.row #isOwned + label span::before{
   content: "";
@@ -103,7 +122,6 @@
   font-size: 2em;
   text-transform: uppercase;
   margin-bottom: .2em;
-  
 }
 
 .form .button-group{
@@ -122,11 +140,14 @@
   background-color: dodgerblue;
   text-transform: uppercase;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  
 }
 
 .form .button-group button:hover {
   opacity: 0.8;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  
+  
 }
 
 .form .button-group button:active {

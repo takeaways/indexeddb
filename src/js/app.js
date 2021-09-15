@@ -1,4 +1,5 @@
 import { set, get, createStore } from "idb-keyval";
+import "./event";
 import "../css/app.css";
 // import "./creatingAndVersioning";
 import "./transactionAndRequests";
