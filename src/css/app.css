@@ -3,4 +3,30 @@
   padding:0;
   user-select: none;
   box-sizing: border-box;
+  font-size: 10px;
+}
+
+header.header{
+  height: 8rem;
+  background-color:black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:#fff;
+  padding: 0 2em;
+}
+
+.header .logo{
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.header .logo img{
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;  
+}
+
+.header .name strong{
+  font-size: 2rem;
 }
