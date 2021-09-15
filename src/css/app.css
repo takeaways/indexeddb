@@ -6,6 +6,15 @@
   font-size: 10px;
 }
 
+a{
+  text-decoration: none;
+  color:inherit;
+}
+
+body{
+  background-color: rgb(63, 7, 7);
+}
+
 header.header{
   height: 8rem;
   background-color:black;
@@ -14,11 +23,31 @@ header.header{
   align-items: center;
   color:#fff;
   padding: 0 2em;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .header .logo{
   overflow: hidden;
   border-radius: 50%;
+}
+
+main.main{
+  font-size: 2em;
+  padding:4em 1em 6em 1em; 
+}
+
+main.main h1{
+  font-size: 3em;
+  color:goldenrod;
+}
+
+main.main h2{
+  font-size: 2em;
+  color:rgb(153, 35, 35);
 }
 
 .header .logo img{
@@ -29,4 +58,26 @@ header.header{
 
 .header .name strong{
   font-size: 2rem;
+}
+
+footer.footer {
+  border-top: 2px solid #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: maroon;
+}
+footer.footer p{
+  padding:2em;
+}
+footer.footer p,
+footer.footer p a{
+  font-size: 2rem;
+  font-weight: 600;
+  color:#fff;
+  opacity: 0.8;
 }
