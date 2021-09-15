@@ -3,13 +3,17 @@
   align-items: center;
   justify-content: center;
   padding:2em;
-  max-width: 480px;
-  background-color: #ddd;
+  min-width: 300px;
+  max-width: 500px;
   margin:0 auto;
+  border-radius: 5px;
+  background-color: #ddd;
+  box-shadow: rgba(184, 78, 29, 0.35) 0px 5px 15px;
 }
 
 .form{
   width: 100%;
+  
 }
 .form p{
   display: flex;
@@ -25,6 +29,12 @@
   padding:.2em;
   border:none;
   outline: none;
+  border-radius: .2em;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: box-shadow .2s linear;
+}
+.form input:focus{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 .form p.row label[for='isOwned']{
   margin-right: .5em;
@@ -48,9 +58,10 @@
 .form p.row #isOwned + label span{
   display: inline-block;
   position: relative;
+  transition: background-color .6s ease-in-out;
 }
 .form p.row #isOwned:checked + label span{
-  background-color: green;
+  background-color:limegreen;
 }
 .form p.row #isOwned + label span::before{
   content: "";
@@ -90,7 +101,34 @@
 }
 .form label{
   font-size: 2em;
-  text-transform: capitalize;
+  text-transform: uppercase;
   margin-bottom: .2em;
+  
 }
 
+.form .button-group{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(50px, 1fr));
+  grid-gap:5px;
+}
+
+.form .button-group button{
+  padding:.8em;
+  border:none;
+  border-radius: .5em;
+  cursor: pointer;
+  font-size: 1.6em;
+  color:white;
+  background-color: dodgerblue;
+  text-transform: uppercase;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.form .button-group button:hover {
+  opacity: 0.8;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.form .button-group button:active {
+  opacity: 0.9;
+}
