@@ -1,6 +1,6 @@
 # indexeddb
 Do you know how to use indexeddb?
-
+![check](/github-assets/images/check.gif)
 
 # Setup
 1. make common javascript browser setup and open with live-server
