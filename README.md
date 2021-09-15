@@ -46,3 +46,13 @@ import "../css/app.css"
   }
 })()
 ```
+
+## Base CRUD
+```js
+import { set, get, update, del } from "idb-keyval";
+```
+
+## keys, values and entries
+```js
+import { keys, values, entries} from "idb-keyval";
+```

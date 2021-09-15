@@ -1,4 +1,4 @@
-import { set, get, update } from "idb-keyval";
+import { set, get, update, del } from "idb-keyval";
 import "../css/app.css";
 
 (async () => {
@@ -13,11 +13,15 @@ import "../css/app.css";
 
     await set("info", mock_user_info_data);
     const info = await get("info");
+    console.log(info);
 
     await update("user_id", () => "UPUP");
 
-    console.log(info);
+    await set("dd", "delete gogo");
+
+    del("dd");
   } catch (error) {
+    console.log("------");
     console.error(error);
   }
 })();
