@@ -1,7 +1,7 @@
 # indexeddb
 Do you know how to use indexeddb?  
 ![check](/github-assets/images/check.gif)
-
+[here to form fun](https://takeaways.github.io/indexeddb/)
 # Setup
 1. make common javascript browser setup and open with live-server
 2. open chrome and chrome devtool.
