@@ -1,0 +1,31 @@
+{
+  "name": "indexeddb",
+  "version": "1.0.0",
+  "description": "Do you know how to use indexeddb?",
+  "main": "app.js",
+  "scripts": {
+    "start": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takeaways/indexeddb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/takeaways/indexeddb/issues"
+  },
+  "homepage": "https://github.com/takeaways/indexeddb#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.3.2",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.1"
+  },
+  "dependencies": {}
+}
