@@ -1,10 +1,21 @@
-import {set} from "idb-keyval"
+
+import {set, get} from "idb-keyval"
 import "../css/app.css"
 
 (async () =>{
   try {
     await set('user_id', Date.now())
-    console.log("save user id")
+    
+    const mock_user_info_data = {
+      id:1004,
+      name:'Geonil Jang',
+      email:'wkdrjsdlf2@gmail.com'
+    }
+
+    await set('info', mock_user_info_data)
+    const info = await get('info')
+    console.log(info)
+
   } catch (error) {
     console.error(error)
   }
